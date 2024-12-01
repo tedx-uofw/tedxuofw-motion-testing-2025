@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DotGrid from '../components/LottieTS test';
+import DotGrid from '../components/LottieTS test 2';
 import DotData from '../data/DotData';
 
 

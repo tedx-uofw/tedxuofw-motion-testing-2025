@@ -1,17 +1,21 @@
 import React, { useState, useEffect, useRef, useCallback } from "react"
 import throttle from "lodash/throttle"
-import dotData from "../data/circle_diameters_compressed.dat"
+// import dotData from "../data/circle_diameters_compressed.dat"
 
 export default function DotGrid(props) {
     const {
         dotSize = 10,
-        dotColor = "blue",
-        maxDotSize = 20,
+        dotColor = "white",
+        maxDotSize = 30,
         dotSpacing = 30,
-        gridRows = 10,
-        gridColumns = 10,
+        gridRows = 55,
+        gridColumns = 55,
         waveThickness = 40, // Widen the wave's area of influence
         mouseInfluenceRadius = 150, // Radius of mouse hover effect
+        // distanceThreshold = 10,
+        // smoothFactor = 0.5,
+        // shape = "circle",
+        // enableLookAt = true,
     } = props
 
     const [mousePosition, setMousePosition] = useState({ x: -1, y: -1 })
