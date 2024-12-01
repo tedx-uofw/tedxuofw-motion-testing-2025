@@ -1,0 +1,4 @@
+tedx-testing/build/
+tedx-testing/node_modules/
+.DS_Store
+venv/
