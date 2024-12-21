@@ -17,7 +17,6 @@ export default function DotGrid(props) {
     } = props;
 
     const [mousePosition, setMousePosition] = useState({ x: -1, y: -1 });
-    const [aquariumEffect, setAquariumEffect] = useState(0);
     const [renderKey, setRenderKey] = useState(0); // Force UI re-render when necessary
     const wavesRef = useRef([]); // Store waves without triggering re-renders
     const containerRef = useRef(null);
@@ -71,13 +70,6 @@ export default function DotGrid(props) {
         requestAnimationFrame(animateWaves);
         return () => cancelAnimationFrame(animateWaves);
     }, [animateWaves]);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setAquariumEffect((prev) => prev + 0.05);
-        }, 16.7); // Approximately 60 FPS
-        return () => clearInterval(interval);
-    }, []);
 
     const calculateDotSize = useCallback(
         (dotX, dotY) => {
