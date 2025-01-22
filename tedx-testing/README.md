@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# TEDxUofW Motion Testing 2025 - Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React web app for the TEDxUofW 2025 website's dot grid animations.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- Interactive dot grid animation
+- Dynamic hero section
+- Responsive design
+- Route-based navigation
+- Performance optimized
+- Customizable themes
 
-### `npm start`
+## 🚀 Quick Start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js (v18+)
+- npm/yarn
+- Animation data from hero-grid-dots
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Install dependencies:
+```bash
+cd tedx-testing
+npm install
+```
 
-### `npm run build`
+2. Start dev server:
+```bash
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Opens at `http://localhost:3000`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🎨 Components
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### DotGrid
+Grid animation component properties:
+- `dotSize`: Base dot size (default: 10)
+- `dotColor`: Dot color
+- `maxDotSize`: Maximum dot size
+- `distanceThreshold`: Interaction distance
+- `dotSpacing`: Space between dots
+- `gridRows/gridColumns`: Grid dimensions
+- `smoothFactor`: Animation smoothness
+- `shape`: Dot shape ("circle" default)
+- `enableLookAt`: Look-at behavior
 
-### `npm run eject`
+### HeroAnimation
+Main hero section with dot grid animation.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ⚙️ Configuration
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Environment Variables
+In `.env`:
+```
+REACT_APP_ANIMATION_SPEED=1
+REACT_APP_DEFAULT_THEME=dark
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Performance Tips
+- Keep grid below 60x60
+- `smoothFactor`: 0.3-0.7
+- Adjust `distanceThreshold` to screen
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🐛 Common Issues
 
-## Learn More
+1. **Slow Animation**
+   - Reduce grid density
+   - Lower `maxDotSize`
+   - Disable `enableLookAt`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2. **Build Errors**
+   - Clear cache: `npm cache clean --force`
+   - Reinstall node_modules
+   - Check Node.js version
